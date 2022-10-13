@@ -15,15 +15,20 @@ module.exports = {
       '2xl': 32,
     },
     colors: {
-      'gray-100': '#E1E1E6',
-      'gray-200': '#C4C4CC',
-      'gray-400': '#7C7C8A',
-      'gray-800': '#202024',
-      'gray-900': '#121214',
-      'black': '#000000',
-      'white': '#FFFFFF',
-      'cyan-500': '#81D8F7',
-      'cyan-300': '#9BE1FB',
+      transparent: 'transparent',
+      black: '#000000',
+      white: '#FFFFFF',
+      gray: {
+        100: '#E1E1E6',
+        200: '#C4C4CC',
+        400: '#7C7C8A',
+        800: '#202024',
+        900: '#121214',
+      },
+      cyan: {
+        500: '#81D8F7',
+        300: '#9BE1FB',
+      },
 
     },
     extend: {
