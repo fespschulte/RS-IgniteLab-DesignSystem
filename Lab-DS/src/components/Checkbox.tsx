@@ -1,20 +1,17 @@
-import { clsx } from 'clsx';
-import { ReactNode } from 'react';
+import * as CheckboxPrimitive from '@radix-ui/react-checkbox'
 
-export interface CheckboxProps {
-  children: ReactNode;
-  asChild?: boolean;
-}
+import { Check } from 'phosphor-react'
 
-export function Checkbox({ children, asChild }: CheckboxProps) {
-  const Comp = asChild ? Slot : 'checkbox';
-  
+export interface CheckboxProps {}
+
+export function Checkbox({}: CheckboxProps) {  
   return (
-    <div className={clsx(
-      'py-4 px-3 bg-cyan-500 rounded font-semibold text-black text-sm w-full transition-colors hover:bg-cyan-300 focus:ring-2 ring-white', 
-      )}
-    >
-      {children}
-    </div>
+    <CheckboxPrimitive.Root className="w-6 h-6 bg-gray-800 p-[2px] rounded">
+
+    <CheckboxPrimitive.Indicator asChild>
+      <Check weight="bold" className=" h-5 w-5 text-cyan-500" />
+    </CheckboxPrimitive.Indicator>
+    </CheckboxPrimitive.Root>
+
   )
 }
